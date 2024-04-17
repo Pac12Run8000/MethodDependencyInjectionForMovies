@@ -22,7 +22,9 @@ struct Result: Codable {
     let originalLanguage: OriginalLanguage
     let originalTitle, overview: String
     let popularity: Double
-    let posterPath, releaseDate, title: String
+    let posterPath: String?
+    let releaseDate: String
+    let title: String
     let video: Bool
     let voteAverage: Double
     let voteCount: Int
@@ -48,6 +50,7 @@ enum OriginalLanguage: String, Codable {
     case ja = "ja"
     case ru = "ru"
     case zh = "zh"
+    case ko = "ko"
 }
 
 typealias MovieSearchObjects = [MovieSearchObject]
