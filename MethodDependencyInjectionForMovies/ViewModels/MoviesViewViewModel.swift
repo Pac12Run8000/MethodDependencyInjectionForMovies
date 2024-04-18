@@ -13,10 +13,15 @@ class MoviesViewModel: ObservableObject {
         self.networkingService = networkingService
     }
     
-    func loadMovies() async {
+    func loadMovies(str:String) async {
+        
+        guard let encodedString = str.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            print("Failed to encode the query string")
+            return
+        }
         isLoading = true
         do {
-            let movieSearchObject:MovieSearchObject = try await MovieNetworkingService.shared.retrieveMovieSearch(urlString: "https://api.themoviedb.org/3/search/movie?query=Lethal%20Weapon")
+            let movieSearchObject:MovieSearchObject = try await MovieNetworkingService.shared.retrieveMovieSearch(urlString: "https://api.themoviedb.org/3/search/movie?query=\(encodedString)")
             self.movies = movieSearchObject
             guard let movies = self.movies else {
                 return

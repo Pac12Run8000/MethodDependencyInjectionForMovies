@@ -30,10 +30,8 @@ final class MovieNetworkingService:NetworkingServiceProtocol {
             let decodedData = try decoder.decode(MovieSearchObject.self, from: data)
             return decodedData
         } catch {
-            // Additional logging to understand what went wrong during decoding
             print("Decoding error: \(error)")
         throw error
-//        throw CustomErrors.cannotDecode
         }
     }
 }

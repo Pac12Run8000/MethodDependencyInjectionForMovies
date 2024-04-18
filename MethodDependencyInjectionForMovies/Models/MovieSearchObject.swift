@@ -19,7 +19,7 @@ struct Result: Codable {
     let backdropPath: String?
     let genreIDS: [Int]
     let id: Int
-    let originalLanguage: OriginalLanguage
+    let originalLanguage: OriginalLanguage?
     let originalTitle, overview: String
     let popularity: Double
     let posterPath: String?
@@ -51,6 +51,15 @@ enum OriginalLanguage: String, Codable {
     case ru = "ru"
     case zh = "zh"
     case ko = "ko"
+    case de = "de"
+    case tr = "tr"
+    case unknown
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let rawValue = try container.decode(String.self)
+        self = OriginalLanguage(rawValue: rawValue) ?? .unknown
+    }
 }
 
 typealias MovieSearchObjects = [MovieSearchObject]

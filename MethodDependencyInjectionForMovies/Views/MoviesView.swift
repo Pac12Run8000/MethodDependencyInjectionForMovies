@@ -12,7 +12,7 @@ struct MoviesView: View {
         VStack {
             TextField("Search movies...", text: $searchText) {
                 Task {
-                    await viewModel.loadMovies()
+                    await viewModel.loadMovies(str: searchText)
                 }
             }
             .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -23,10 +23,12 @@ struct MoviesView: View {
             if !viewModel.outputArray.isEmpty {
                 List(viewModel.outputArray, id:\.self) { item in
                     Text(item)
+                        .font(.custom("Helvetica Neue", size: 16))
                 }
             } else {
                 List {
                     Text("No movies found")
+                        .font(.custom("Helvetica Neue", size: 16))
                 }
             }
             Spacer()
