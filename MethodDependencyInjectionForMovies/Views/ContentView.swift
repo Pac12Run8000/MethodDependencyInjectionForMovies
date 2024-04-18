@@ -11,13 +11,6 @@ struct ContentView: View {
             CustomButton(label: "Movies", color: .blue) {
                 print("Movies button tapped")
             }
-            
-            if viewModel.movies.isEmpty {
-                    Text("No results")
-                } else {
-                    Text("Total Results for first movie: \(viewModel.movies[0].totalResults)")
-                }
-
             CustomButton(label: "People", color: .green) {
                 print("People button tapped")
             }
