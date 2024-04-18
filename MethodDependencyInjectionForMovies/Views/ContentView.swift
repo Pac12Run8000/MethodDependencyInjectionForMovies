@@ -1,15 +1,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel: MoviesViewModel
+//    @StateObject var viewModel: MoviesViewModel
+    @State private var showMovieModal = false
     
-    init() {
-            _viewModel = StateObject(wrappedValue: MoviesViewModel(networkingService: MovieNetworkingService()))
-    }
+//    init() {
+//            _viewModel = StateObject(wrappedValue: MoviesViewModel(networkingService: MovieNetworkingService()))
+//    }
     var body: some View {
         VStack {
             CustomButton(label: "Movies", color: .blue) {
-                print("Movies button tapped")
+               showMovieModal = true
             }
             CustomButton(label: "People", color: .green) {
                 print("People button tapped")
@@ -19,10 +20,13 @@ struct ContentView: View {
                 print("TV button tapped")
             }
         }
-        .onAppear {
-            Task {
-                await viewModel.loadMovies()
-            }
+//        .onAppear {
+//            Task {
+//                await viewModel.loadMovies()
+//            }
+//        }
+        .sheet(isPresented: $showMovieModal) {
+                MoviesView()
         }
     }
 }

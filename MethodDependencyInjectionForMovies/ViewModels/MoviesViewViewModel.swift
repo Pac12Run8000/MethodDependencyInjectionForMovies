@@ -36,11 +36,3 @@ class MoviesViewModel: ObservableObject {
 
 
 
-//                        if viewModel.movies.isEmpty {
-//                                Text("No results")
-//                            } else {
-//                                Text("Total Results for first movie: \(viewModel.movies[0].results[0].originalTitle)")
-//                            }
-
-
-
