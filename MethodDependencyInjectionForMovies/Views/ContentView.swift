@@ -1,32 +1,25 @@
 import SwiftUI
 
 struct ContentView: View {
-//    @StateObject var viewModel: MoviesViewModel
     @State private var showMovieModal = false
-    
-//    init() {
-//            _viewModel = StateObject(wrappedValue: MoviesViewModel(networkingService: MovieNetworkingService()))
-//    }
+    @State private var showTVModal = false
     var body: some View {
         VStack {
             CustomButton(label: "Movies", color: .blue) {
                showMovieModal = true
             }
-            CustomButton(label: "People", color: .green) {
-                print("People button tapped")
+            CustomButton(label: "Person", color: .green) {
+               print("Person tapped")
             }
-
             CustomButton(label: "TV", color: .red) {
-                print("TV button tapped")
+                showTVModal = true
             }
         }
-//        .onAppear {
-//            Task {
-//                await viewModel.loadMovies()
-//            }
-//        }
         .sheet(isPresented: $showMovieModal) {
                 MoviesView()
+        }
+        .sheet(isPresented: $showTVModal) {
+                TVView()
         }
     }
 }
