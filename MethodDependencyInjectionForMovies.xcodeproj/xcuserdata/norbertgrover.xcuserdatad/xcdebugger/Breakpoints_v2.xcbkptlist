@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A9A17FC7-AD57-4227-A87E-6C3BD8E5B2D8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B7CCAF05-6943-497A-A823-DA0A1A195783"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MethodDependencyInjectionForMovies/NetworkingServices/PersonNetworkingService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "retrieveMovieSearch(urlString:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02007E91-DA6B-4DF6-9C4F-7BCD23E34991"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MethodDependencyInjectionForMovies/ViewModels/PersonViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "loadMovies(str:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4EBC2491-A80D-4516-A8B0-6351DE66CE0D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MethodDependencyInjectionForMovies/ViewModels/PersonViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "loadMovies(str:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE075029-8155-4CDD-A082-4998C78C7433"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MethodDependencyInjectionForMovies/ViewModels/PersonViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "loadMovies(str:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DE075029-8155-4CDD-A082-4998C78C7433 - 75ea5674cb855a19"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MethodDependencyInjectionForMovies.Result) -&gt; Swift.String in MethodDependencyInjectionForMovies.PersonViewModel.loadMovies(str: Swift.String) async -&gt; ()"
+                  moduleName = "MethodDependencyInjectionForMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/norbertgrover/Documents/PragmaticProgramming/MethodDependencyInjectionForMovies/MethodDependencyInjectionForMovies/ViewModels/PersonViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31">
+               </Location>
+               <Location
+                  uuid = "DE075029-8155-4CDD-A082-4998C78C7433 - 75ea5674cb855a19"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MethodDependencyInjectionForMovies.Result) -&gt; Swift.String in MethodDependencyInjectionForMovies.PersonViewModel.loadMovies(str: Swift.String) async -&gt; ()"
+                  moduleName = "MethodDependencyInjectionForMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/norbertgrover/Documents/PragmaticProgramming/MethodDependencyInjectionForMovies/MethodDependencyInjectionForMovies/ViewModels/PersonViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31">
+               </Location>
+               <Location
+                  uuid = "DE075029-8155-4CDD-A082-4998C78C7433 - 75ea5674cb855a19"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MethodDependencyInjectionForMovies.Result) -&gt; Swift.String in MethodDependencyInjectionForMovies.PersonViewModel.loadMovies(str: Swift.String) async -&gt; ()"
+                  moduleName = "MethodDependencyInjectionForMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/norbertgrover/Documents/PragmaticProgramming/MethodDependencyInjectionForMovies/MethodDependencyInjectionForMovies/ViewModels/PersonViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

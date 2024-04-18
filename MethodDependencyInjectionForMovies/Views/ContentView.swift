@@ -3,13 +3,14 @@ import SwiftUI
 struct ContentView: View {
     @State private var showMovieModal = false
     @State private var showTVModal = false
+    @State private var showPersonModal = false
     var body: some View {
         VStack {
             CustomButton(label: "Movies", color: .blue) {
                showMovieModal = true
             }
             CustomButton(label: "Person", color: .green) {
-               print("Person tapped")
+               showPersonModal = true
             }
             CustomButton(label: "TV", color: .red) {
                 showTVModal = true
@@ -20,6 +21,9 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showTVModal) {
                 TVView()
+        }
+        .sheet(isPresented: $showPersonModal) {
+            PersonView()
         }
     }
 }

@@ -1,11 +1,11 @@
 import SwiftUI
 
-struct TVView: View {
+struct PersonView: View {
     @State private var searchText = ""
-    @StateObject var viewModel:TVViewModel
+    @StateObject var viewModel:PersonViewModel
     
     init() {
-        _viewModel = StateObject(wrappedValue:TVViewModel(networkingService: TVNetworkingService()))
+        _viewModel = StateObject(wrappedValue:PersonViewModel(networkingService: PersonNetworkingService()))
     }
 
     var body: some View {
