@@ -29,7 +29,7 @@ struct TVView: View {
                 }
             } else {
                 List {
-                    Text("No movies found")
+                    Text("tv show not found ...")
                         .font(.custom("Helvetica Neue", size: 16))
                 }
             }

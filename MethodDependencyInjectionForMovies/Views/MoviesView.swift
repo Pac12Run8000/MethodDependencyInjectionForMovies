@@ -27,7 +27,7 @@ struct MoviesView: View {
                 }
             } else {
                 List {
-                    Text("No movies found")
+                    Text("movie not found ...")
                         .font(.custom("Helvetica Neue", size: 16))
                 }
             }

@@ -29,7 +29,7 @@ struct PersonView: View {
                 }
             } else {
                 List {
-                    Text("No movies found")
+                    Text("people not found ...")
                         .font(.custom("Helvetica Neue", size: 16))
                 }
             }

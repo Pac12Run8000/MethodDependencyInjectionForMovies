@@ -28,6 +28,7 @@ struct Result: Codable {
     let video: Bool?
     let voteAverage: Double?
     let voteCount: Int?
+    let knownFor: [KF]?
 
     enum CodingKeys: String, CodingKey {
         case adult
@@ -42,9 +43,18 @@ struct Result: Codable {
         case title, video
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
+        case knownFor = "known_for"
     }
 }
 
+struct KF:Codable {
+    let originalName:String?
+    let overview:String?
+    enum CodingKeys: String, CodingKey {
+        case originalName = "original_name"
+        case overview
+    }
+}
 enum OriginalLanguage: String, Codable {
     case en = "en"
     case ja = "ja"

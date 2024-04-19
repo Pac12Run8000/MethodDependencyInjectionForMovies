@@ -14,7 +14,7 @@ class PersonViewModel: ObservableObject {
     }
     
     func loadMovies(str:String) async {
-        
+        var tempArray:[String] = []
         guard let encodedString = str.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             print("Failed to encode the query string")
             return
@@ -26,15 +26,19 @@ class PersonViewModel: ObservableObject {
             guard let persons = self.persons else {
                 return
             }
-            print("Output: \(self.persons?.results[0])")
-            self.outputArray = persons.results.map { result in
-                if let overview = result.overview, let originalTitle = result.originalTitle, let releaseDate = result.releaseDate {
-                    return "Title: \(originalTitle)\nRelease date: \(releaseDate) \nShow description: \(overview)"
+            let results = persons.results
+            for item in results {
+                if let knownFor = item.knownFor {
+                    for knownItem in knownFor {
+                        let overview = knownItem.overview ?? ""
+                        let originalName = knownItem.originalName ?? ""
+                        tempArray.append("original name: \(originalName)\noverview: \(overview)")
+                    }
                 } else {
-                    return ""
+                    tempArray = [String]()
                 }
+                self.outputArray = tempArray
             }
-//            outputArray.forEach { print($0) }
             errorMessage = nil
         } catch {
             errorMessage = "Failed to load movies"
