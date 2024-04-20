@@ -28,7 +28,11 @@ class MoviesViewModel: ObservableObject {
             }
             
             self.outputArray = movies.results.map { result in
-               return "title: \(result.originalTitle)\ndescription: \(result.overview)\n"
+                if let originalTitle = result.originalTitle, let overview = result.overview {
+                    return "title: \(originalTitle)\ndescription: \(overview)\n"
+                } else {
+                    return ""
+                }
             }
 //            outputArray.forEach { print($0) }
             errorMessage = nil

@@ -32,7 +32,7 @@ class PersonViewModel: ObservableObject {
                     for knownItem in knownFor {
                         let overview = knownItem.overview ?? ""
                         let originalName = knownItem.originalName ?? ""
-                        tempArray.append("original name: \(originalName)\noverview: \(overview)")
+                        tempArray.append("overview: \(overview)")
                     }
                 } else {
                     tempArray = [String]()
