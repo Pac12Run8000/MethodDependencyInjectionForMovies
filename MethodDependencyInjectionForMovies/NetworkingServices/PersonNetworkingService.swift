@@ -10,7 +10,8 @@ final class PersonNetworkingService:NetworkingServiceProtocol {
         }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.addValue("Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYWZmMGYyYTJlMDUxOTMyNzk2ODYxZGI2YTI0NmQ3NSIsInN1YiI6IjU5MzY5N2UyOTI1MTQxNmJlZTAwZDA2ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IZZ_QnAvoat2CoJDtjgQZxpcyrLVW7qQBLx3OHvYgHU", forHTTPHeaderField: "Authorization")
+        // Bearer Token is empty. You need to supply that.
+        request.addValue("", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
         let (data, response) = try await URLSession.shared.data(for: request)
